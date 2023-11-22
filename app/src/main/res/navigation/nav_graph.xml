@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/main">
+
+    <fragment
+        android:id="@+id/main"
+        android:name="com.example.diplom2.screens.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/physical"
+        android:name="com.example.diplom2.screens.physical.PhysicalFragment"
+        android:label="fragment_physical"
+        tools:layout="@layout/fragment_physical" >
+        <action
+            android:id="@+id/action_physical_to_newPhysics"
+            app:destination="@id/newPhysics" />
+    </fragment>
+    <fragment
+        android:id="@+id/allFood"
+        android:name="com.example.diplom2.screens.food.AllFood"
+        android:label="fragment_all_food"
+        tools:layout="@layout/fragment_all_food" >
+        <action
+            android:id="@+id/action_allFood_to_addFood"
+            app:destination="@id/addFood" />
+        <action
+            android:id="@+id/action_allFood_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFood"
+        android:name="com.example.diplom2.screens.food.addfood.AddFood"
+        android:label="fragment_add_food"
+        tools:layout="@layout/fragment_add_food" >
+        <action
+            android:id="@+id/action_addFood_to_allFood"
+            app:destination="@id/allFood" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.diplom2.screens.food.detailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" >
+        <action
+            android:id="@+id/action_detailsFragment_to_allFood"
+            app:destination="@id/allFood" />
+    </fragment>
+    <fragment
+        android:id="@+id/newPhysics"
+        android:name="com.example.diplom2.screens.physic_data.NewPhysics"
+        android:label="fragment_new_physics"
+        tools:layout="@layout/fragment_new_physics" >
+        <action
+            android:id="@+id/action_newPhysics_to_physical"
+            app:destination="@id/physical" />
+    </fragment>
+</navigation>

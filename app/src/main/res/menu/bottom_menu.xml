@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/physical"
+        android:icon="@drawable/ic_physical"
+        android:title="Физ данные"/>
+    <item
+        android:id="@+id/main"
+        android:icon="@drawable/ic_main"
+        android:title="Главная"/>
+    <item
+        android:id="@+id/allFood"
+        android:icon="@drawable/ic_food"
+        android:title="Питание"/>
+</menu>

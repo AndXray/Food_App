@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue"
+    android:background="@color/white"
     android:paddingTop="30dp"
     tools:context=".screens.food.addfood.AddFood">
 
@@ -37,12 +37,13 @@
         </LinearLayout>
 
         <TextView
+            android:fontFamily="@font/nunito_regular"
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:text="Добавление"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/black"
             android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -50,6 +51,7 @@
 
 
         <EditText
+            android:fontFamily="@font/nunito_regular"
             android:id="@+id/title_food"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -58,18 +60,19 @@
             android:layout_marginEnd="24dp"
             android:gravity="center_horizontal"
             android:maxLength="25"
-            android:textColor="#FFFFFF"
-            app:backgroundTint="#FFFFFF"
+            android:textColor="@color/black"
+            app:backgroundTint="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <TextView
+            android:fontFamily="@font/nunito_lightitalic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:text="Название продукта"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/black"
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -93,6 +96,7 @@
 
 
                 <EditText
+                    android:fontFamily="@font/nunito_regular"
                     android:id="@+id/kalorii_food"
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
@@ -101,18 +105,19 @@
                     android:gravity="center_horizontal"
                     android:inputType="number"
                     android:maxLength="4"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/black"
                     android:textSize="24sp"
-                    app:backgroundTint="#FFFFFF"
+                    app:backgroundTint="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/title_food" />
 
                 <TextView
+                    android:fontFamily="@font/nunito_lightitalic"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Калорийность"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/black"
                     android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -136,10 +141,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-
                 android:orientation="vertical">
-
                 <EditText
+                    android:fontFamily="@font/nunito_regular"
                     android:id="@+id/belki_food"
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
@@ -148,18 +152,19 @@
                     android:gravity="center_horizontal"
                     android:inputType="number"
                     android:maxLength="3"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/black"
                     android:textSize="24sp"
-                    app:backgroundTint="#FFFFFF"
+                    app:backgroundTint="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/title_food" />
 
                 <TextView
+                    android:fontFamily="@font/nunito_lightitalic"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Белки"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/black"
                     android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -168,28 +173,28 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
-
                 <EditText
+                    android:fontFamily="@font/nunito_regular"
                     android:id="@+id/jiri_food"
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:inputType="number"
                     android:maxLength="3"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/black"
                     android:textSize="24sp"
-                    app:backgroundTint="#FFFFFF"
+                    app:backgroundTint="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
+                    android:fontFamily="@font/nunito_lightitalic"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Жиры"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/black"
                     android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -198,11 +203,10 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
-
                 <EditText
+                    android:fontFamily="@font/nunito_regular"
                     android:id="@+id/uglevodi_food"
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
@@ -211,18 +215,19 @@
                     android:gravity="center_horizontal"
                     android:inputType="number"
                     android:maxLength="3"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/black"
                     android:textSize="24sp"
-                    app:backgroundTint="#FFFFFF"
+                    app:backgroundTint="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/title_food" />
 
                 <TextView
+                    android:fontFamily="@font/nunito_lightitalic"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Углеводы"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/black"
                     android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -249,11 +254,11 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/blue"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
                 <EditText
+                    android:fontFamily="@font/nunito_regular"
                     android:id="@+id/ves_food"
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
@@ -262,28 +267,33 @@
                     android:gravity="center_horizontal"
                     android:inputType="number"
                     android:maxLength="4"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/black"
                     android:textSize="24sp"
-                    app:backgroundTint="#FFFFFF" />
+                    app:backgroundTint="@color/black" />
 
                 <TextView
+                    android:fontFamily="@font/nunito_lightitalic"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:text="Масса порции\nв граммах"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/black"
                     android:textSize="20sp" />
             </LinearLayout>
 
         </LinearLayout>
 
         <Button
+            android:fontFamily="@font/nunito_black"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="7dp"
             android:id="@+id/btn_add_new_food"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:backgroundTint="@color/darkblue"
+            android:backgroundTint="@color/lightblue"
             android:text="Добавить"
+            android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

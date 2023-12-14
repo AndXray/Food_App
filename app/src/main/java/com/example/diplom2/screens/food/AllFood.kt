@@ -1,15 +1,12 @@
 package com.example.diplom2.screens.food
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
@@ -66,7 +63,7 @@ class AllFood : Fragment() {
             onBtnNewClicked()
         }
         btn_list.setOnClickListener{
-        Log.e("11","HELLO LIST")
+            onBtnExistClicked()
         }
     }
 
@@ -82,6 +79,9 @@ class AllFood : Fragment() {
 
     private fun onBtnNewClicked(){
         APP.navController.navigate(R.id.action_allFood_to_addFood)
+    }
+    private fun onBtnExistClicked(){
+        APP.navController.navigate(R.id.action_allFood_to_existFood)
     }
 
     private fun setVisibility(clicked: Boolean) {

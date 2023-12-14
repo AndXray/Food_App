@@ -30,6 +30,9 @@
         <action
             android:id="@+id/action_allFood_to_detailsFragment"
             app:destination="@id/detailsFragment" />
+        <action
+            android:id="@+id/action_allFood_to_existFood"
+            app:destination="@id/existFood" />
     </fragment>
     <fragment
         android:id="@+id/addFood"
@@ -57,5 +60,31 @@
         <action
             android:id="@+id/action_newPhysics_to_physical"
             app:destination="@id/physical" />
+    </fragment>
+    <fragment
+        android:id="@+id/existFood"
+        android:name="com.example.diplom2.screens.food.existFood.ExistFood"
+        android:label="fragment_exist_food"
+        tools:layout="@layout/fragment_exist_food" >
+        <action
+            android:id="@+id/action_existFood_to_addFood"
+            app:destination="@id/addFood" />
+        <action
+            android:id="@+id/action_existFood_to_allFood"
+            app:destination="@id/allFood" />
+        <action
+            android:id="@+id/action_existFood_to_detailsExistFragment"
+            app:destination="@id/detailsExistFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsExistFragment"
+        android:name="com.example.diplom2.screens.food.existFood.detailsExistFragment"
+        android:label="detailsExistFragment" >
+        <action
+            android:id="@+id/action_detailsExistFragment_to_allFood"
+            app:destination="@id/allFood" />
+        <action
+            android:id="@+id/action_detailsExistFragment_to_existFood"
+            app:destination="@id/existFood" />
     </fragment>
 </navigation>

@@ -10,9 +10,11 @@ import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
 import com.example.diplom2.APP
 import com.example.diplom2.R
+import com.example.diplom2.databinding.ActivityMainBinding
 import com.example.diplom2.databinding.FragmentAddFoodBinding
 import com.example.diplom2.databinding.FragmentDetailsBinding
 import com.example.diplom2.model.FoodModel
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_details.*
 import java.lang.String.format
 import kotlin.math.roundToInt
@@ -36,6 +38,11 @@ class detailsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         init()
         btnBack()
+    }
+
+    override fun onStart() {
+        super.onStart()
+
     }
 
     private fun init() {

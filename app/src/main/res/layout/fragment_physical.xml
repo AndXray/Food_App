@@ -3,11 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
 
-    android:paddingTop="?attr/actionBarSize"
-    >
+    android:paddingTop="?attr/actionBarSize">
     <LinearLayout
-        android:background="@color/blue"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -18,22 +17,22 @@
             android:gravity="center_horizontal"
             android:layout_marginLeft="80dp">
             <TextView
+                android:fontFamily="@font/nunito_lightitalic"
+                android:textColor="@color/grey"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Ваш возаст: "
-                android:textColor="@color/white"
+                android:text="Ваш возраст: "
                 android:textSize="30sp"
-
                 />
             <TextView
+                android:fontFamily="@font/nunito_regular"
                 android:id="@+id/vozrast"
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="00"
-                android:textColor="@color/darkblue"
+                android:text="?"
+                android:textColor="@color/black"
                 android:textSize="30sp"
 
                 />
@@ -47,21 +46,22 @@
             android:gravity="center_horizontal"
             android:layout_marginTop="20dp">
             <TextView
+                android:fontFamily="@font/nunito_lightitalic"
+                android:textColor="@color/grey"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Ваш Пол: "
-                android:textColor="@color/white"
                 android:textSize="30sp"
-
                 />
             <TextView
+                android:fontFamily="@font/nunito_regular"
                 android:id="@+id/pol"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Z"
-                android:textColor="@color/darkblue"
+                android:text="?"
+                android:textColor="@color/black"
                 android:textSize="30sp"
 
                 />
@@ -75,21 +75,22 @@
             android:gravity="center_horizontal"
             android:layout_marginTop="20dp">
             <TextView
+                android:fontFamily="@font/nunito_lightitalic"
+                android:textColor="@color/grey"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Ваш рост: "
-                android:textColor="@color/white"
                 android:textSize="30sp"
-
                 />
             <TextView
+                android:fontFamily="@font/nunito_regular"
                 android:id="@+id/rost"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="000"
-                android:textColor="@color/darkblue"
+                android:text="?"
+                android:textColor="@color/black"
                 android:textSize="30sp"
 
                 />
@@ -103,21 +104,22 @@
             android:gravity="center_horizontal"
             android:layout_marginTop="20dp">
             <TextView
+                android:fontFamily="@font/nunito_lightitalic"
+                android:textColor="@color/grey"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Ваш вес: "
-                android:textColor="@color/white"
                 android:textSize="30sp"
-
                 />
             <TextView
+                android:fontFamily="@font/nunito_regular"
                 android:id="@+id/ves"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="000"
-                android:textColor="@color/darkblue"
+                android:text="?"
+                android:textColor="@color/black"
                 android:textSize="30sp"
 
                 />
@@ -127,35 +129,37 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_horizontal"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="40dp"
             >
             <TextView
+                android:fontFamily="@font/nunito_lightitalic"
+                android:textColor="@color/grey"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Ваш основной обмен\nв сутки:"
-                android:textColor="@color/white"
                 android:textSize="30sp"
-
                 />
 
         </LinearLayout>
         <TextView
+            android:fontFamily="@font/nunito_regular"
             android:id="@+id/obmen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="0000"
-            android:textColor="@color/darkblue"
+            android:text="?"
+            android:textColor="@color/black"
             android:textSize="30sp"
             />
         <TextView
-
+            android:fontFamily="@font/nunito_lightitalic"
+            android:textColor="@color/grey"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Калорий"
-            android:textColor="@color/blue"
+
             android:textSize="30sp"
 
             />
@@ -172,20 +176,22 @@
                 android:orientation="vertical"
                 android:gravity="center_horizontal">
                 <TextView
+                    android:fontFamily="@font/nunito_regular"
                     android:id="@+id/belki"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="555"
-                    android:textColor="@color/darkblue"
+                    android:text="?"
+                    android:textColor="@color/black"
                     android:textSize="30sp"
                     />
                 <TextView
+                    android:fontFamily="@font/nunito_lightitalic"
+                    android:textColor="@color/grey"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="Белков"
-                    android:textColor="@color/white"
                     android:textSize="25sp"
                     />
             </LinearLayout>
@@ -198,20 +204,22 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp">
                 <TextView
+                    android:fontFamily="@font/nunito_regular"
                     android:id="@+id/jiri"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="444"
-                    android:textColor="@color/darkblue"
+                    android:text="?"
+                    android:textColor="@color/black"
                     android:textSize="30sp"
                     />
                 <TextView
+                    android:fontFamily="@font/nunito_lightitalic"
+                    android:textColor="@color/grey"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="Жиров"
-                    android:textColor="@color/white"
                     android:textSize="25sp"
                     />
             </LinearLayout>
@@ -222,20 +230,22 @@
                 android:orientation="vertical"
                 android:gravity="center_horizontal">
                 <TextView
+                    android:fontFamily="@font/nunito_regular"
                     android:id="@+id/uglevodi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="333"
-                    android:textColor="@color/darkblue"
+                    android:text="?"
+                    android:textColor="@color/black"
                     android:textSize="30sp"
                     />
                 <TextView
+                    android:fontFamily="@font/nunito_lightitalic"
+                    android:textColor="@color/grey"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="Углеводов"
-                    android:textColor="@color/white"
                     android:textSize="25sp"
                     />
             </LinearLayout>
@@ -250,12 +260,17 @@
             android:orientation="vertical"
             android:gravity="center_horizontal">
         <Button
+            android:fontFamily="@font/nunito_black"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="7dp"
             android:id="@+id/btn_new_data"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="15dp"
             android:layout_width="wrap_content"
-            android:backgroundTint="@color/darkblue"
+            android:backgroundTint="@color/lightblue"
             android:layout_height="wrap_content"
-            android:text="Обновить данные"/>
+            android:textSize="18sp"
+            android:text="Обновить данные"
+            android:textColor="@color/black"/>
 
         </LinearLayout>
     </LinearLayout>

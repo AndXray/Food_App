@@ -1,22 +1,25 @@
 package com.example.diplom2
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.os.Environment
-import android.util.Log
-import android.view.View
-import android.widget.Spinner
+import android.view.LayoutInflater
+import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.material.AlertDialog
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
+import androidx.navigation.NavInflater
 import androidx.navigation.Navigation
 import androidx.navigation.ui.setupWithNavController
 import com.example.diplom2.databinding.ActivityMainBinding
 import com.example.diplom2.db.FoodDataBase
 import com.example.diplom2.screens.food.AllFoodViewModel
-import com.example.diplom2.screens.main.MainFragment
+import com.example.diplom2.screens.physic_data.NewPhysicViewModel
+import com.example.diplom2.screens.physic_data.NewPhysics
 import java.io.File
-import java.io.IOException
 import java.util.*
+
 
 class MainActivity : AppCompatActivity() {
     lateinit var db: FoodDataBase
@@ -24,16 +27,28 @@ class MainActivity : AppCompatActivity() {
     lateinit var navController: NavController
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
-        //this.getSupportActionBar()?.hide();
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        APP = this
-        navController = Navigation.findNavController(this, R.id.nav_host_fragment)
-        navController = Navigation.findNavController(this, R.id.nav_host_fragment)
-        binding.bottomNavView.setupWithNavController(navController)
-        binding.bottomNavView.itemIconTintList = null
+
+//        Проверка на первый запуск
+        val sp : SharedPreferences = getSharedPreferences("my_settings", Context.MODE_PRIVATE)
+        val hasVisited : Boolean = sp.getBoolean("hasVisited", false)
+        if (!hasVisited) {
+
+            dialog()
+
+            val e : SharedPreferences.Editor = sp.edit()
+            e.putBoolean("hasVisited", true)
+            e.commit()
+        }
+            setContentView(binding.root)
+            APP = this
+            navController = Navigation.findNavController(this, R.id.nav_host_fragment)
+            navController = Navigation.findNavController(this, R.id.nav_host_fragment)
+            binding.bottomNavView.setupWithNavController(navController)
+            binding.bottomNavView.itemIconTintList = null
 
         //ПРОВЕРКА ФАЙЛА С ДАТОЙ
         val storeDirectory = this.getExternalFilesDir(Environment.DIRECTORY_DCIM)
@@ -46,6 +61,14 @@ class MainActivity : AppCompatActivity() {
         if(!fileScore.exists()) {
             fileScore.writeText("0")
     }
+    }
+
+    private fun dialog(){
+        var builder = androidx.appcompat.app.AlertDialog.Builder(this)
+        builder.setTitle("Вас приветствует приложение Food Helper.")
+        builder.setMessage("Перед началом работы перейдите в раздел физических данных и настройте приложение под себя.")
+        builder.setNeutralButton("ОК"){dialogInterface, i ->}
+        builder.show()
 
     }
 
@@ -72,9 +95,5 @@ class MainActivity : AppCompatActivity() {
         file.writeText(last)
         val date = file.readText()
     }
-    fun hide(){
-        binding.bottomNavView.visibility = View.GONE
-    }
-
 
 }

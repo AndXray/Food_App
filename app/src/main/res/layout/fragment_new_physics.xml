@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/blue"
     tools:context=".screens.physic_data.NewPhysics"
     android:paddingTop="30dp">
 
@@ -37,12 +36,13 @@
         </LinearLayout>
 
         <TextView
+            android:fontFamily="@font/nunito_regular"
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:text="Физические данные"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/black"
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -75,6 +75,7 @@
                 android:orientation="vertical">
 
             <EditText
+                android:fontFamily="@font/nunito_regular"
                 android:id="@+id/title_rost"
                 android:gravity="center_horizontal"
                 android:layout_width="100dp"
@@ -93,10 +94,11 @@
 
             </LinearLayout>
             <TextView
+                android:fontFamily="@font/nunito_lightitalic"
+                android:textColor="@color/grey"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Рост в см."
-                android:textColor="#FFFFFF"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -117,6 +119,7 @@
                     android:layout_marginEnd="20dp"
                     android:orientation="vertical">
                 <EditText
+                    android:fontFamily="@font/nunito_regular"
                     android:id="@+id/title_ves"
                     android:gravity="center_horizontal"
                     android:layout_width="100dp"
@@ -133,10 +136,11 @@
                     app:layout_constraintTop_toBottomOf="@+id/title_food" />
             </LinearLayout>
                 <TextView
+                    android:fontFamily="@font/nunito_lightitalic"
+                    android:textColor="@color/grey"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Вес в кг."
-                    android:textColor="#FFFFFF"
                     android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -167,6 +171,7 @@
                     android:layout_marginEnd="20dp"
                     android:orientation="vertical">
                     <Spinner
+                        android:fontFamily="@font/nunito_regular"
                         android:id="@+id/title_pol"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -176,10 +181,11 @@
 
             </LinearLayout>
                 <TextView
+                    android:fontFamily="@font/nunito_lightitalic"
+                    android:textColor="@color/grey"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Пол"
-                    android:textColor="#FFFFFF"
                     android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -200,8 +206,10 @@
                     android:layout_marginEnd="20dp"
                     android:orientation="vertical">
                 <EditText
+                    android:fontFamily="@font/nunito_regular"
                     android:id="@+id/title_vozrast"
                     android:layout_width="100dp"
+                    android:gravity="center_horizontal"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
                     android:layout_marginEnd="24dp"
@@ -217,10 +225,11 @@
 
             </LinearLayout>
                 <TextView
+                    android:fontFamily="@font/nunito_lightitalic"
+                    android:textColor="@color/grey"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Возраст"
-                    android:textColor="#FFFFFF"
                     android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -229,12 +238,14 @@
         </LinearLayout>
 
         <TextView
+            android:fontFamily="@font/nunito_regular"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
             android:gravity="center_horizontal"
             android:text="Цель"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/black"
             android:textSize="26sp"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
@@ -250,18 +261,20 @@
                     android:orientation="horizontal"
                     android:showDividers="middle">
                 <TextView
+                    android:fontFamily="@font/nunito_lightitalic"
+                    android:textColor="@color/grey"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Снизить вес"
-                    android:textColor="#FFFFFF"
                     android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginRight="15dp"/>
                 <TextView
+                    android:fontFamily="@font/nunito_lightitalic"
+                    android:textColor="@color/grey"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Повысить вес"
-                    android:textColor="#FFFFFF"
                     android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -269,23 +282,24 @@
                 </LinearLayout>
 
             <RadioGroup
+                android:layout_marginTop="10dp"
                 android:id="@+id/radioGrp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal">
                 <RadioButton
+                    android:layout_marginRight="100dp"
                     android:id="@+id/radioButtonDown"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
-                    android:layout_marginRight="50dp"
+                    android:color="@color/black"
                     />
                 <RadioButton
                     android:id="@+id/radioButtonUp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
+                    android:color="@color/black"
                     />
 
             </RadioGroup>
@@ -293,12 +307,16 @@
 
 
         <Button
+            android:fontFamily="@font/nunito_black"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="7dp"
             android:id="@+id/btn_add_new_phys"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:backgroundTint="@color/darkblue"
+            android:backgroundTint="@color/lightblue"
             android:text="Обновить"
+            android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

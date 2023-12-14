@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.diplom2.R
+import com.example.diplom2.model.ExistFoodModel
 import com.example.diplom2.model.FoodModel
 import com.example.diplom2.screens.food.AllFood
 import kotlinx.android.synthetic.main.card_layout.view.*
@@ -28,15 +29,11 @@ class FoodAdapter: RecyclerView.Adapter<FoodAdapter.FoodViewHolder> (){
 
     override fun onBindViewHolder(holder: FoodViewHolder, position: Int) {
 
-
         holder.itemView.item_title.text = listFood[position].title
         holder.itemView.item_kalorii.text = listFood[position].kalorazh.toString()
         holder.itemView.item_belki.text = listFood[position].belki.toString()
         holder.itemView.item_jiri.text = listFood[position].jiri.toString()
         holder.itemView.item_uglevodi.text = listFood[position].uglevodi.toString()
-
-
-
 
     }
 

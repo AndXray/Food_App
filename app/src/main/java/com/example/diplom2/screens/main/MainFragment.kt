@@ -2,6 +2,8 @@ package com.example.diplom2.screens.main
 
 import android.annotation.SuppressLint
 import android.app.Application
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.os.Environment
 import android.util.Log
@@ -75,27 +77,11 @@ class MainFragment : Fragment() {
         }
         val viewModel = ViewModelProvider(this)
             .get(MainScrViewModel::class.java)
-//        val Kalorazh = Calculator().Calculate(rost, ves, pol, vozrast)
-//        var kaloryi = Kalorazh[0]
-//        var belki = Kalorazh[1]
-//        var jiri = Kalorazh[2]
-//        var uglevody = Kalorazh[3]
         viewModel.initDataBase()
 
         calculate()
-
-//        Thread {
-//            val eaten = (viewModel.sumKalorii() ?: 0.0).toInt()
-//            val eatenBelki = (viewModel.sumBelki() ?: 0.0).toInt()
-//            val eatenJiri = (viewModel.sumJiri() ?: 0.0).toInt()
-//            val eatenUglevodi = (viewModel.sumUglevodi() ?: 0.0).toInt()
-//            progress()
-//            viewModel.dayKallorii(eaten, kaloryi, progressBar, mojno, roundCal)
-//            viewModel.dayBelki(eatenBelki, belki, belkiProgress, progressBarBelki)
-//            viewModel.dayJiri(eatenJiri, jiri, jiriProgress, progressBarJiri)
-//            viewModel.ddayUglevodi(eatenUglevodi, uglevody, uglevodiProgress, progressBarUglevodi)
-//        }.start()
     }
+
 
 
     fun progress()

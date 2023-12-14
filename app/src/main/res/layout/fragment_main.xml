@@ -2,7 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
-    android:background="@color/blue"
+    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingTop="?attr/actionBarSize"
@@ -16,6 +16,7 @@
         android:orientation="vertical">
 
         <TextView
+            android:fontFamily="@font/nunito_regular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -23,7 +24,7 @@
             android:layout_centerVertical="true"
             android:gravity="center"
             android:text="Калорий потреблено\nза сегодня"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -53,11 +54,13 @@
 
                 <TextView
                     android:id="@+id/progress_text_calorii"
+                    android:textColor="@color/grey"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
+                    android:fontFamily="@font/nunito_regular"
                     android:gravity="center"
                     android:text="0000"
 
@@ -66,6 +69,7 @@
             </RelativeLayout>
 
             <TextView
+                android:fontFamily="@font/nunito_lightitalic"
                 android:id="@+id/mojno"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -74,7 +78,7 @@
                 android:layout_centerVertical="true"
                 android:gravity="center"
                 android:text="Можно ещё 000"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="" />
         </LinearLayout>
@@ -110,11 +114,13 @@
 
                     <TextView
                         android:id="@+id/progress_text_belki"
+                        android:textColor="@color/grey"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
+                        android:fontFamily="@font/nunito_regular"
                         android:gravity="center"
                         android:text="000"
                         android:textSize="20sp"
@@ -122,6 +128,7 @@
                 </RelativeLayout>
 
                 <TextView
+                    android:fontFamily="@font/nunito_regular"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -129,7 +136,7 @@
                     android:layout_centerVertical="true"
                     android:gravity="center"
                     android:text="Белки"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -158,11 +165,13 @@
 
                     <TextView
                         android:id="@+id/progress_text_giri"
+                        android:textColor="@color/grey"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
+                        android:fontFamily="@font/nunito_regular"
                         android:gravity="center"
                         android:text="000"
 
@@ -171,6 +180,7 @@
                 </RelativeLayout>
 
                 <TextView
+                    android:fontFamily="@font/nunito_regular"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -178,7 +188,7 @@
                     android:layout_centerVertical="true"
                     android:gravity="center"
                     android:text="Жиры"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -207,11 +217,13 @@
 
                     <TextView
                         android:id="@+id/progress_text_uglevodi"
+                        android:textColor="@color/grey"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
+                        android:fontFamily="@font/nunito_regular"
                         android:gravity="center"
                         android:text="000"
 
@@ -220,6 +232,7 @@
                 </RelativeLayout>
 
                 <TextView
+                    android:fontFamily="@font/nunito_regular"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -227,7 +240,7 @@
                     android:layout_centerVertical="true"
                     android:gravity="center"
                     android:text="Углеводы"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold" />
             </LinearLayout>

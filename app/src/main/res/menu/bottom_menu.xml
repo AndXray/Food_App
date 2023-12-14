@@ -3,6 +3,7 @@
     <item
         android:id="@+id/physical"
         android:icon="@drawable/ic_physical"
+        android:color="@color/black"
         android:title="Физ данные"/>
     <item
         android:id="@+id/main"

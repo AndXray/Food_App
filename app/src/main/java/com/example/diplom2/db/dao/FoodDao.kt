@@ -2,6 +2,7 @@ package com.example.diplom2.db.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import com.example.diplom2.model.ExistFoodModel
 import com.example.diplom2.model.FoodModel
 
 @Dao
@@ -30,6 +31,15 @@ interface FoodDao {
 
     @Query("DELETE from table_food")
     fun deleteAll()
+
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    fun insertExistFood(existFoodModel: ExistFoodModel)
+
+    @Query("SELECT * from table_exist_food")
+    fun getExistFoods(): LiveData<List<ExistFoodModel>>
+
+    @Delete
+    fun delete(existFoodModel: ExistFoodModel)
 
 
 //    @Query("DELETE from table_food")

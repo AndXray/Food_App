@@ -2,12 +2,15 @@ package com.example.diplom2.screens.main
 
 import android.annotation.SuppressLint
 import android.app.Application
+import android.content.Context.MODE_PRIVATE
+import android.content.SharedPreferences
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.navigation.NavController
 import com.example.diplom2.R
 import com.example.diplom2.REPOSITORY
 import com.example.diplom2.db.FoodDataBase
@@ -20,6 +23,7 @@ import kotlinx.coroutines.launch
 class MainScrViewModel(application: Application):AndroidViewModel(application) {
 
     val context = application
+    lateinit var navController: NavController
 
     fun initDataBase(){
         val daoFood = FoodDataBase.getInstance(context).getFoodDao()
@@ -41,6 +45,7 @@ class MainScrViewModel(application: Application):AndroidViewModel(application) {
     fun sumUglevodi():Double? {
         return REPOSITORY.uglevSum
     }
+
 
 //    @SuppressLint("SetTextI18n")
 //    fun dayKallorii(eaten: Int, kaloryi: Int, progressBar: ProgressBar,

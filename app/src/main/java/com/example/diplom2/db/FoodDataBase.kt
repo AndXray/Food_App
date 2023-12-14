@@ -5,9 +5,10 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.diplom2.db.dao.FoodDao
+import com.example.diplom2.model.ExistFoodModel
 import com.example.diplom2.model.FoodModel
 
-@Database(entities = [FoodModel::class], version = 1)
+@Database(entities = [FoodModel::class, ExistFoodModel::class], version = 1)
 abstract class FoodDataBase: RoomDatabase() {
 
     abstract fun getFoodDao(): FoodDao

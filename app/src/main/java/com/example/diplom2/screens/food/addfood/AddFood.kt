@@ -13,14 +13,17 @@ import com.example.diplom2.APP
 import com.example.diplom2.MainActivity
 import com.example.diplom2.R
 import com.example.diplom2.databinding.FragmentAddFoodBinding
+import com.example.diplom2.model.ExistFoodModel
 import com.example.diplom2.model.FoodModel
 import com.example.diplom2.screens.main.MainFragment
+import com.google.gson.Gson
 import kotlinx.android.synthetic.main.fragment_add_food.*
 import java.util.logging.Logger
 import kotlin.math.roundToInt
 
 class AddFood : Fragment() {
     lateinit var binding: FragmentAddFoodBinding
+    private var gson: Gson? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -50,6 +53,8 @@ class AddFood : Fragment() {
                 val jiriFood = binding.jiriFood.text.toString()
                 val uglevodiFood = binding.uglevodiFood.text.toString()
 
+
+
             if (titleFood.isNotEmpty() && kaloriiFood.isNotEmpty() && belkiFood.isNotEmpty() &&
                 jiriFood.isNotEmpty() && uglevodiFood.isNotEmpty() && gramFood.isNotEmpty()) {
 
@@ -63,18 +68,27 @@ class AddFood : Fragment() {
                         uglevodi = (uglevodiFood.toFloat()*gram).roundToInt().toDouble(),
                         ves = gramFood.toInt()
                     )
-                ) {}
-
-//                MainFragment().calculate()
+                )
+                {}
+                viewModel.insertExistFood(
+                    ExistFoodModel(
+                        title = titleFood, kalorazh = (kaloriiFood.toFloat()).roundToInt().toDouble(),
+                        belki = (belkiFood.toFloat()).roundToInt().toDouble(),
+                        jiri = (jiriFood.toFloat()).roundToInt().toDouble(),
+                        uglevodi = (uglevodiFood.toFloat()).roundToInt().toDouble(),
+                        ves = 1
+                    )
+                )
+                {}
                 APP.navController.navigate(R.id.action_addFood_to_allFood)
             }
             else{
                 Toast.makeText(activity, "Заполните все поля", Toast.LENGTH_SHORT).show()
             }
-//                AddFoodViewModel().calculateFood()
+}
+
 
     }
-}
 private fun btnBack(){
     binding.btnBackAddFood.setOnClickListener{
         APP.navController.navigate(R.id.action_addFood_to_allFood)

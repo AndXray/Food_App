@@ -151,7 +151,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal"
             android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@+id/title_food">
@@ -172,6 +172,7 @@
                     android:orientation="vertical">
                     <Spinner
                         android:fontFamily="@font/nunito_regular"
+                        android:textColor="@color/black"
                         android:id="@+id/title_pol"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -241,7 +242,7 @@
             android:fontFamily="@font/nunito_regular"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+
             android:layout_marginBottom="10dp"
             android:gravity="center_horizontal"
             android:text="Цель"
@@ -313,7 +314,7 @@
             android:id="@+id/btn_add_new_phys"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="10dp"
             android:backgroundTint="@color/lightblue"
             android:text="Обновить"
             android:textColor="@color/black"

@@ -82,7 +82,7 @@
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+
             android:gravity="center_horizontal"
             android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@+id/title_food">
@@ -238,10 +238,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+
             android:gravity="center_horizontal"
             android:text="Указывайте значения на 100гр продукта"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
